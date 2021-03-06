@@ -54,4 +54,3 @@ def clean_data():
 
     return ask_values, bid_values
 
-

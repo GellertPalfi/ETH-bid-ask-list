@@ -21,7 +21,7 @@ from buy_sell import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.buy_sell, name='buy_sell'),  # duplicate url instead of 404, because of no homepage
+    path('', views.home_view, name='buy_sell'),  # duplicate url instead of 404, because of no homepage
     path('buy/', views.buy_sell, name='buy_sell'),
     path('sell/', views.buy_sell, name='buy_sell'),
 

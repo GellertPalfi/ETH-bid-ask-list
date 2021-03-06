@@ -2,30 +2,30 @@
 {% block content %}
     <tbody>
     {% if request.get_full_path == "/buy/" %}
-    {% for field in bids %}
-        <tr class=text-center>
-            <td>{{ field.0 }}</td>
-            <td>{{ field.1 }}</td>
-            {% if field.2 is None %}
-                <td>Na</td>
-            {% else %}
-                <td>{{ field.2 }}</td>
-            {% endif %}
-        </tr>
-    {% endfor %}
+        {% for field in bids %}
+            <tr class=text-center>
+                <td>{{ field.0 }}</td>
+                <td>{{ field.1 }}</td>
+                {% if field.2 is None %}
+                    <td>Na</td>
+                {% else %}
+                    <td>{{ field.2 }}</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
     {% endif %}
     {% if request.get_full_path == "/sell/" %}
-    {% for field in asks %}
-        <tr class=text-center>>
-            <td>{{ field.0 }}</td>
-            <td>{{ field.1 }}</td>
-            {% if field.2 is None %}
-                <td>Na</td>
-            {% else %}
-                <td>{{ field.2 }}</td>
-            {% endif %}
-        </tr>
-    {% endfor %}
+        {% for field in asks %}
+            <tr class=text-center>
+                <td>{{ field.0 }}</td>
+                <td>{{ field.1 }}</td>
+                {% if field.2 is None %}
+                    <td>Na</td>
+                {% else %}
+                    <td>{{ field.2 }}</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
     {% endif %}
     </tbody>
 {% endblock %}
